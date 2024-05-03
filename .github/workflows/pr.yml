@@ -10,7 +10,7 @@ jobs:
     steps:
       - name: Check PR Title
         run: |
-          title="${{ github.event.pull_request.title }}"
+          title="${{ github.event.pull_request.title }}"|id
           echo $title
           if [[ $title =~ ^(chore|fix|feat) ]]; then
             echo "PR title starts with 'chore', 'fix', or 'feat'"
